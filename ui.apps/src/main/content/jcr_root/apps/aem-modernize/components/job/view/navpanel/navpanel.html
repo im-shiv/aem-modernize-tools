@@ -21,13 +21,9 @@
     class="aem-modernize-navpanel-bucket-action"
     id="${properties.id}"
     size="${properties.size}"
-    orientation="${properties.orientation}"
-    data-sly-use.job="${'com.adobe.aem.modernize.model.ConversionJobNavItem' @ path=request.requestPathInfo.suffix}"
-    data-sly-list.bucket="${job.navBuckets}">
-
-  <coral-tab data-sly-attribute.selected="${bucket.selected}"
-      class="${bucket.statusClass}" icon="${bucket.icon}" id="bucket-${bucketList.index}"
-      data-href="${properties.viewUrl}${request.requestPathInfo.suffix}?bucket=${bucketList.index}">
-    Bucket ${bucketList.count} (${bucket.count} Items)
+    orientation="${properties.orientation}">
+  <coral-tab selected id="bucket-0"
+      data-href="${properties.viewUrl}${request.requestPathInfo.suffix}?bucket=0">
+    Bucket 1
   </coral-tab>
 </coral-tablist>
